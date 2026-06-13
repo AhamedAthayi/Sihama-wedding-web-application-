@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fathima Shehama &amp; Mohamed Nafees — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;500;600&family=Marck+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░░ PARTICLES ░░░ -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ░░░ NAV DOTS ░░░ -->
+  <nav id="nav-dots" aria-label="Page navigation">
+    <button class="ndot active" data-sec="0" aria-label="Envelope"></button>
+    <button class="ndot" data-sec="1" aria-label="Invitation"></button>
+    <button class="ndot" data-sec="2" aria-label="Countdown"></button>
+    <button class="ndot" data-sec="3" aria-label="Venue Map"></button>
+    <button class="ndot" data-sec="4" aria-label="Wishes"></button>
+  </nav>
+
+  <!-- ════════════════════════════════════════
+       PAGE 1 — ENVELOPE
+  ════════════════════════════════════════ -->
+  <section class="page" id="page-envelope">
+    <div class="env-scene" id="envScene" role="button" tabindex="0" aria-label="Open invitation envelope">
+      <p class="env-hint">✦ Tap to Open ✦</p>
+
+      <div class="envelope" id="envelope">
+        <!-- back body -->
+        <div class="env-back">
+          <div class="env-bg-pattern"></div>
+          <span class="env-corner tl">✦</span>
+          <span class="env-corner tr">✦</span>
+          <span class="env-corner bl">✦</span>
+          <span class="env-corner br">✦</span>
+        </div>
+        <!-- left & right side flaps -->
+        <div class="env-side-l"></div>
+        <div class="env-side-r"></div>
+        <!-- bottom flap -->
+        <div class="env-bottom"></div>
+        <!-- top flap -->
+        <div class="env-flap" id="envFlap"></div>
+        <!-- wax seal -->
+        <div class="env-seal" id="envSeal">
+          <div class="seal-ring"></div>
+          <span class="seal-text">N&amp;F</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-scroll-cue" data-target="1">
+      <span class="cue-label">Scroll</span>
+      <div class="cue-chevrons"><span></span><span></span></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PAGE 2 — INVITATION CARD
+  ════════════════════════════════════════ -->
+  <section class="page" id="page-card">
+    <div id="invitation-card" class="inv-card-wrap hidden">
+      <div class="inv-card" id="invCard">
+
+        <!-- shimmer overlay -->
+        <div class="card-shimmer"></div>
+
+        <!-- ── top arch ornament ── -->
+        <div class="arch-ornament">
+          <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 55 Q150 5 290 55" stroke="url(#archGrad)" stroke-width="1" fill="none"/>
+            <path d="M30 55 Q150 15 270 55" stroke="url(#archGrad2)" stroke-width=".5" fill="none" opacity=".5"/>
+            <circle cx="150" cy="8" r="4" fill="#c9a84c" opacity=".7"/>
+            <circle cx="90"  cy="30" r="2.5" fill="#c9a84c" opacity=".4"/>
+            <circle cx="210" cy="30" r="2.5" fill="#c9a84c" opacity=".4"/>
+            <defs>
+              <linearGradient id="archGrad" x1="0" y1="0" x2="300" y2="0"><stop offset="0%" stop-color="transparent"/><stop offset="50%" stop-color="#c9a84c"/><stop offset="100%" stop-color="transparent"/></linearGradient>
+              <linearGradient id="archGrad2" x1="0" y1="0" x2="300" y2="0"><stop offset="0%" stop-color="transparent"/><stop offset="50%" stop-color="#e8d08a"/><stop offset="100%" stop-color="transparent"/></linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- ── floral side art ── -->
+        <div class="floral-col left">
+          <svg viewBox="0 0 70 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M35 320 Q20 280 18 240 Q14 195 28 165 Q42 130 36 90 Q30 55 38 20" stroke="#9a7ab8" stroke-width="1.2" fill="none" stroke-dasharray="3 4"/>
+            <ellipse cx="22" cy="168" rx="16" ry="9"  fill="#c8b8d8" opacity=".45" transform="rotate(-35,22,168)"/>
+            <ellipse cx="30" cy="130" rx="14" ry="7"  fill="#c8b8d8" opacity=".3"  transform="rotate(20,30,130)"/>
+            <ellipse cx="18" cy="205" rx="13" ry="7"  fill="#b3a0c8" opacity=".35" transform="rotate(-55,18,205)"/>
+            <ellipse cx="38" cy="92"  rx="12" ry="6.5" fill="#c8b8d8" opacity=".4" transform="rotate(15,38,92)"/>
+            <circle  cx="28" cy="165" r="5"  fill="#c9a84c" opacity=".4"/>
+            <circle  cx="36" cy="90"  r="4"  fill="#c9a84c" opacity=".3"/>
+            <circle  cx="20" cy="240" r="3"  fill="#c9a84c" opacity=".25"/>
+            <!-- petals -->
+            <path d="M22 168 Q10 155 14 142 Q22 145 22 168Z" fill="#d4b8e0" opacity=".3"/>
+            <path d="M22 168 Q8  172 10 185 Q19 180 22 168Z" fill="#d4b8e0" opacity=".25"/>
+          </svg>
+        </div>
+        <div class="floral-col right">
+          <svg viewBox="0 0 70 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M35 320 Q20 280 18 240 Q14 195 28 165 Q42 130 36 90 Q30 55 38 20" stroke="#9a7ab8" stroke-width="1.2" fill="none" stroke-dasharray="3 4"/>
+            <ellipse cx="22" cy="168" rx="16" ry="9"  fill="#c8b8d8" opacity=".45" transform="rotate(-35,22,168)"/>
+            <ellipse cx="30" cy="130" rx="14" ry="7"  fill="#c8b8d8" opacity=".3"  transform="rotate(20,30,130)"/>
+            <ellipse cx="18" cy="205" rx="13" ry="7"  fill="#b3a0c8" opacity=".35" transform="rotate(-55,18,205)"/>
+            <ellipse cx="38" cy="92"  rx="12" ry="6.5" fill="#c8b8d8" opacity=".4" transform="rotate(15,38,92)"/>
+            <circle  cx="28" cy="165" r="5"  fill="#c9a84c" opacity=".4"/>
+            <circle  cx="36" cy="90"  r="4"  fill="#c9a84c" opacity=".3"/>
+            <circle  cx="20" cy="240" r="3"  fill="#c9a84c" opacity=".25"/>
+            <path d="M22 168 Q10 155 14 142 Q22 145 22 168Z" fill="#d4b8e0" opacity=".3"/>
+            <path d="M22 168 Q8  172 10 185 Q19 180 22 168Z" fill="#d4b8e0" opacity=".25"/>
+          </svg>
+        </div>
+
+        <!-- ── rose corners ── -->
+        <div class="rose-corner tl">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M32 6 Q48 22 32 32 Q16 22 32 6Z" fill="#c8b8d8" opacity=".5"/><path d="M6 32 Q22 16 32 32 Q22 48 6 32Z" fill="#c8b8d8" opacity=".4"/><path d="M58 32 Q42 48 32 32 Q42 16 58 32Z" fill="#c8b8d8" opacity=".4"/><path d="M32 58 Q16 42 32 32 Q48 42 32 58Z" fill="#c8b8d8" opacity=".5"/><circle cx="32" cy="32" r="9" fill="#c9a84c" opacity=".35"/><circle cx="32" cy="32" r="5" fill="#e8d08a" opacity=".4"/></svg>
+        </div>
+        <div class="rose-corner tr">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M32 6 Q48 22 32 32 Q16 22 32 6Z" fill="#c8b8d8" opacity=".5"/><path d="M6 32 Q22 16 32 32 Q22 48 6 32Z" fill="#c8b8d8" opacity=".4"/><path d="M58 32 Q42 48 32 32 Q42 16 58 32Z" fill="#c8b8d8" opacity=".4"/><path d="M32 58 Q16 42 32 32 Q48 42 32 58Z" fill="#c8b8d8" opacity=".5"/><circle cx="32" cy="32" r="9" fill="#c9a84c" opacity=".35"/><circle cx="32" cy="32" r="5" fill="#e8d08a" opacity=".4"/></svg>
+        </div>
+
+        <!-- ── content ── -->
+        <div class="card-body">
+
+          <div class="bismillah">
+            <p class="bism-ar">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+            <p class="bism-en">In the name of Allah — The Most Beneficent, The Most Merciful</p>
+          </div>
+
+          <div class="gold-divider"><span>✦</span></div>
+
+          <p class="hosts-name">Mr. &amp; Mrs. Faris</p>
+          <p class="hosts-request">Kindly request your presence at the wedding ceremony of their daughter</p>
+
+          <div class="gold-divider"><span>❧</span></div>
+
+          <!-- Names block -->
+          <div class="names-block" id="namesBlock">
+            <div class="name-bride">Fathima Shehama</div>
+            <div class="names-amp">&amp;</div>
+            <div class="name-groom">Mohamed Nafees</div>
+          </div>
+          <p class="son-of">Son of Mr. &amp; Mrs. Nazar</p>
+
+          <div class="thin-rule"></div>
+
+          <!-- Scratch date -->
+          <div class="scratch-section">
+            <p class="scratch-eyebrow">✦ Scratch to Reveal the Date ✦</p>
+            <div class="scratch-wrap" id="scratchWrap">
+              <div class="date-behind">
+                <span class="date-piece">JULY</span>
+                <span class="date-sep">|</span>
+                <span class="date-piece">11</span>
+                <span class="date-sep">|</span>
+                <span class="date-piece">2026</span>
+              </div>
+              <canvas id="scratchCanvas"></canvas>
+            </div>
+            <p class="scratch-sub" id="scratchSub">← scratch here →</p>
+            <p class="scratch-done" id="scratchDone">✦ REVEALED — SAVE THE DATE ✦</p>
+          </div>
+
+          <div class="event-details">
+            <p class="ev-line"><strong>Saturday &nbsp;·&nbsp; Dinner</strong></p>
+            <p class="ev-line">From <strong>8.00 pm</strong> Onward</p>
+          </div>
+
+          <!-- Venue -->
+          <div class="venue-pill" id="venuePill" role="button" tabindex="0" aria-label="View venue on map">
+            <span class="venue-pin">📍</span>
+            <span class="venue-info">
+              <span class="venue-name">Makeezah Mahal</span>
+              <span class="venue-addr">No. 55, Thotawatta Road, Werawatta, Panadura</span>
+            </span>
+            <span class="venue-arrow">→ Map</span>
+          </div>
+
+          <p class="dua-text">Barakallahu Laka Wabaraka Alaika<br>Vajama'a Bainakuma Fee Khair</p>
+
+          <div class="card-footer">
+            <div class="cf-left">
+              <strong>Address</strong>
+              No: 66/26, Kamala Road,<br>Keselwatta, Panadura
+            </div>
+            <div class="cf-right">
+              <strong>Contact</strong>
+              076 980 2892<br>077 641 7346
+            </div>
+          </div>
+        </div><!-- card-body -->
+
+        <!-- ── bottom arch ── -->
+        <div class="arch-ornament bottom">
+          <svg viewBox="0 0 300 40" fill="none"><path d="M10 5 Q150 50 290 5" stroke="url(#archGradB)" stroke-width="1" fill="none"/><defs><linearGradient id="archGradB" x1="0" y1="0" x2="300" y2="0"><stop offset="0%" stop-color="transparent"/><stop offset="50%" stop-color="#c9a84c"/><stop offset="100%" stop-color="transparent"/></linearGradient></defs></svg>
+        </div>
+
+      </div><!-- inv-card -->
+    </div>
+
+    <div class="page-scroll-cue" data-target="2">
+      <span class="cue-label">Countdown</span>
+      <div class="cue-chevrons"><span></span><span></span></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PAGE 3 — COUNTDOWN
+  ════════════════════════════════════════ -->
+  <section class="page" id="page-countdown">
+    <div class="cd-wrap">
+      <p class="section-eyebrow">✦ Time Until Forever ✦</p>
+      <h2 class="section-heading">The Big Day Approaches</h2>
+      <p class="cd-dateline">July 11, 2026 &nbsp;·&nbsp; 8:00 PM &nbsp;·&nbsp; Panadura</p>
+
+      <!-- ring -->
+      <div class="cd-ring-wrap">
+        <svg class="cd-ring-svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="rg1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#c9a84c"/>
+              <stop offset="100%" stop-color="#e8d08a"/>
+            </linearGradient>
+          </defs>
+          <circle class="ring-track" cx="100" cy="100" r="88"/>
+          <circle class="ring-progress" id="ringProgress" cx="100" cy="100" r="88"/>
+        </svg>
+        <div class="ring-label">
+          <span class="ring-pct" id="ringPct">—</span>
+          <span class="ring-sublabel">journey complete</span>
+        </div>
+      </div>
+
+      <!-- boxes -->
+      <div class="cd-boxes">
+        <div class="cd-box"><span class="cd-num" id="cd-d">—</span><span class="cd-lbl">Days</span></div>
+        <div class="cd-box"><span class="cd-num" id="cd-h">—</span><span class="cd-lbl">Hours</span></div>
+        <div class="cd-box"><span class="cd-num" id="cd-m">—</span><span class="cd-lbl">Mins</span></div>
+        <div class="cd-box"><span class="cd-num" id="cd-s">—</span><span class="cd-lbl">Secs</span></div>
+      </div>
+    </div>
+
+    <div class="page-scroll-cue" data-target="3">
+      <span class="cue-label">Venue</span>
+      <div class="cue-chevrons"><span></span><span></span></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PAGE 4 — MAP
+  ════════════════════════════════════════ -->
+  <section class="page" id="page-map">
+    <div class="map-wrap">
+      <p class="section-eyebrow">✦ Wedding Venue ✦</p>
+      <h2 class="section-heading">Find Your Way to Us</h2>
+
+      <div class="map-card">
+        <div class="map-topbar">
+          <div class="map-topbar-left">
+            <span class="map-venue-name">Makeezah Mahal</span>
+            <span class="map-venue-addr">No. 55, Thotawatta Road, Werawatta, Panadura, Sri Lanka</span>
+          </div>
+          <span class="map-badge">4.2 ★</span>
+        </div>
+
+        <iframe
+          class="map-iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990!2d79.91011!3d6.74253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae45f6de97a694d%3A0x36e27eb22c18f7cd!2sMakeeza%20Mahal!5e0!3m2!1sen!2slk!4v1720000000000"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Makeezah Mahal on Google Maps">
+        </iframe>
+
+        <div class="map-actions">
+          <a class="map-btn primary" href="https://maps.google.com/?q=Makeeza+Mahal+Panadura+Sri+Lanka" target="_blank" rel="noopener">
+            🗺️ Open in Google Maps
+          </a>
+          <a class="map-btn secondary" href="https://maps.google.com/maps/dir/?api=1&destination=6.7425318,79.91011" target="_blank" rel="noopener">
+            🧭 Get Directions
+          </a>
+        </div>
+      </div>
+
+      <div class="venue-grid">
+        <div class="vg-tile"><div class="vg-icon">📅</div><strong>Date</strong><span>July 11, 2026</span></div>
+        <div class="vg-tile"><div class="vg-icon">🕗</div><strong>Time</strong><span>8:00 PM Onwards</span></div>
+        <div class="vg-tile"><div class="vg-icon">🅿️</div><strong>Parking</strong><span>Available on site</span></div>
+        <div class="vg-tile"><div class="vg-icon">📞</div><strong>Tel</strong><span>076 980 2892</span></div>
+      </div>
+    </div>
+
+    <div class="page-scroll-cue" data-target="4">
+      <span class="cue-label">Send Wishes</span>
+      <div class="cue-chevrons"><span></span><span></span></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PAGE 5 — WISHES WALL
+  ════════════════════════════════════════ -->
+  <section class="page" id="page-wishes">
+    <div class="wishes-wrap">
+      <p class="section-eyebrow">✦ Wedding Wishes ✦</p>
+      <h2 class="section-heading">Send Your Blessings</h2>
+      <p class="wishes-sub">Leave a heartfelt message for Fathima &amp; Mohamed — it will be displayed below for all to see.</p>
+
+      <!-- Wish form -->
+      <div class="wish-form-card" id="wishFormCard">
+        <div class="wf-row">
+          <div class="wf-field">
+            <label class="wf-label" for="wishName">Your Name</label>
+            <input class="wf-input" id="wishName" type="text" placeholder="e.g. Ahmed & Family" maxlength="60" autocomplete="name"/>
+          </div>
+          <div class="wf-field">
+            <label class="wf-label" for="wishRelation">Relation</label>
+            <select class="wf-input" id="wishRelation">
+              <option value="">— select —</option>
+              <option>Family</option>
+              <option>Friend</option>
+              <option>Colleague</option>
+              <option>Neighbour</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="wf-field">
+          <label class="wf-label" for="wishMsg">Your Wish</label>
+          <textarea class="wf-input wf-textarea" id="wishMsg" rows="3" placeholder="Write your heartfelt wishes here…" maxlength="280"></textarea>
+          <span class="wf-char-count"><span id="charCount">0</span>/280</span>
+        </div>
+        <!-- emoji quick-pick -->
+        <div class="wf-emoji-row">
+          <span class="emoji-label">Quick add:</span>
+          <button class="emoji-btn" data-e="💍">💍</button>
+          <button class="emoji-btn" data-e="🌸">🌸</button>
+          <button class="emoji-btn" data-e="🤲">🤲</button>
+          <button class="emoji-btn" data-e="❤️">❤️</button>
+          <button class="emoji-btn" data-e="🌙">🌙</button>
+          <button class="emoji-btn" data-e="✨">✨</button>
+          <button class="emoji-btn" data-e="🕊️">🕊️</button>
+        </div>
+        <button class="wish-submit-btn" id="wishSubmitBtn">✦ Send My Wish ✦</button>
+        <p class="wf-error" id="wfError"></p>
+      </div>
+
+      <!-- Wishes wall -->
+      <div class="wishes-wall" id="wishesWall">
+        <!-- pre-seeded wishes rendered by JS -->
+      </div>
+
+      <!-- empty state -->
+      <p class="wishes-empty" id="wishesEmpty" style="display:none">Be the first to send your blessings 💌</p>
+    </div>
+  </section>
+
+  <!-- ░░░ CONFETTI CONTAINER ░░░ -->
+  <div id="confetti-container" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
